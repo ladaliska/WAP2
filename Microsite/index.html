@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>02 - Sleva</title>
+</head>
+
+<body>
+    <ul>
+        <div>
+        <li><a onclick="changeText('Home')" id="Home" >Domů</a></li>
+        <li><a onclick="changeText('Cost')" id="About" >Ceník</a></li>
+        <li><a onclick="changeText('Con')" id="Contacts" >Kontakty</a></li>
+        <li><img class="logo" src="logo.png" alt="logo"></li>
+        <script>
+            changeText("Home")
+            function changeText(arg) {
+                var text = document.getElementById("text")
+                if (arg == 'Home') {
+                    text.innerHTML = "Když si koupíte náš výhodný balíček, tak v přímořských lokalitách EU budete mít slevu na data <strong>75%</strong>.<br>"
+                }
+                else if (arg == 'Cost') {
+                    text.innerHTML = "<strong>Free+ Modrý</strong>: Neomezené volání a sms, 3GB dat na 5G síťi za 549Kč<br><strong>Free+ Bronzový</strong>: Neomezené volání a sms, 10GB dat na 5G síťi za 699Kč<br><strong>Free+ Stříbrný</strong>: Neomezené volání a sms, 20GB dat na 5G síťi za 899Kč<br><strong>Free+ Zlatý</strong>: Neomezené volání a sms, 60GB dat na 5G síťi za 1299Kč<br>"
+                }
+                else if (arg == 'Con') {
+                    text.innerHTML = "<br> O2 Info Linka <br><strong>800 02 02 02</strong><br>ze zahraničí: +420 720 720 720"
+                }
+            }
+        </script>
+        </div>
+    </ul>
+    <div class="banner">
+        <div class="rekl">
+            <p class="lak">V období letních prázdnin jsou data v evropských přímořských lokalitách účtována se<strong> slevou
+                75%</strong></p>
+        </div>
+        <div class="fill">
+            <img class="bannerImg" src="neco.png" alt="Man">
+        </div>
+    </div>
+    <div>
+        <p id="text">Když si koupíte náš výhodný balíček, tak v přímořských lokalitách EU budete mít slevu na data <strong>75%</strong>.<br><p class='small'>tato sleva platí ve státech: Portugalsko, Španělsko, Irsko, Francie, Belgie, Nizozemsko, Německo, Dánsko, Švédsko, Itálie, Chorvatsko, Slovinsko, Řecko, Bulharsko, Rumunsko, Polsko, Litva, Finsko, Estonsko, Lotyšsko</p>  </p>
+    </div>
+</body>
+
+</html>
