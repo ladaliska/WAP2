@@ -13,6 +13,7 @@ camera.lookAt( 0, 0, 0 );
 //var position = new Vector3(20-window.innerWidth,0,0)
 var cubeone = playerone();
 var cubetwo = playertwo();
+var ball = createball();
 function drawcenter(){
 const material = new THREE.LineDashedMaterial({
 	color: 0xFFFFFF,
@@ -51,6 +52,13 @@ function playertwo(){
     scene.add(cube);
     return(cube)
 }
+function createball(){
+    var geom = new THREE.BoxGeometry(1,1,1);
+    var mat = new THREE.MeshBasicMaterial({color: 0xFFFFFF});
+    var cube = new THREE.Mesh(geom, mat);
+    scene.add(cube);
+    return(cube)
+}
 var xSpeed = 1;
 var ySpeed = 1;
 document.addEventListener("keydown", onDocumentKeyDown, false);
@@ -68,6 +76,11 @@ function onDocumentKeyDown(event) {
 };
 
 var render = function() {
+    const q = new THREE.Quaternion().setFromEuler(1, 0, 1 );
+    const v = new THREE.Vector3( 1, 0, 0 ).applyQuaternion( q );
+
+    const offset = 0.2; // world units
+    ball.position.add( v.multiplyScalar( offset ) );
     requestAnimationFrame(render);
     renderer.render(scene, camera);
   };
