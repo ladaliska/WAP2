@@ -1,2 +1,3 @@
+#Pokus o Pong... jen pohyb...
 Mít stažený Node.js<br>
 spustit v složce(cmd) : npx vite
