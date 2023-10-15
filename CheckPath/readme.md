@@ -1,1 +1,1 @@
-test
+# Potřeba mít stažený node.js
