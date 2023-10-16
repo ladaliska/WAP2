@@ -39,11 +39,9 @@ function moveToNeighbor(apos){ // přesunutí do další možný pozice
 }
 
 function checkIfWay(apos,i){ // Ochrana před zapadnutím do jednosměrky
-    if(!pathToEnd(apos,i)){
-        for(e=0;e<visited[apos].length;e++){
-            if(graph[i][e]!=0 && visited[i][e]==0){
-                return 1;
-            }
+    for(e=0;e<visited[apos].length;e++){
+        if(graph[i][e]!=0 && visited[i][e]==0){
+            return 1;
         }
     }
 }
