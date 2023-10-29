@@ -22,7 +22,7 @@ function dijkstra(graph, start) {
 }
 
 function minDistance(distances, visited) {
-    var min = Infinity
+    var min = Infinity;
 
     for (var v = 0; v < distances.length; v++) {
         if (visited[v] === false && distances[v] <= min) {
