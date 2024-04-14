@@ -1,0 +1,35 @@
+:root {
+    --textalign: unset;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    height: 98vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.info {
+    border: 1px solid #fff;
+}
+
+.example {
+    height: 100%;
+    border: 1px solid #fff;
+    flex-grow: 1;
+}
+
+.sample {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #fff;
+    text-align: var(--textalign);
+}
