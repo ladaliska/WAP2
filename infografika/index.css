@@ -1,10 +1,18 @@
 :root {
     --textalign: unset;
+    --displaygrid: block;
+    --displayflex: block;
+    --justifycontent: left;
+    --aligncenter: normal;
 }
 
 body {
     background-color: #111;
     color: #fff;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .main {
@@ -22,14 +30,27 @@ h1 {
 }
 
 .example {
+    display: var(--displayflex);
+    align-items: var(--aligncenter);
+    justify-content: var(--justifycontent);
     height: 100%;
-    border: 1px solid #fff;
+    border: 1px solid red;
     flex-grow: 1;
 }
 
 .sample {
+    display: var(--displaygrid);
+    align-items: center;
     height: 150px;
     width: 150px;
-    border: 1px solid #fff;
+    border: 1px solid greenyellow;
     text-align: var(--textalign);
+}
+
+.object {
+    color: greenyellow;
+}
+
+.parent {
+    color: red;
 }

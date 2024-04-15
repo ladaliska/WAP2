@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoGrafika</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="main">
         <h1>Jak vycentrovat div</h1>
         <div class="info">
-            <input type="checkbox" id="textalign"> Centrování TEXTU horizontalně uvnitř divu. text-align: center
-            <input type="checkbox" id="textalign"> Centrování TEXTU vertikálně uvnitř divu. display: flex
+            <input type="checkbox" id="textalign"> Centrování TEXTU horizontalně uvnitř divu.<span class="object"> text-align: center </span><br>
+            <input type="checkbox" id="vertical"> Centrování TEXTU vertikálně uvnitř divu.<span class="object"> display: grid; align-items: center</span> <br>
+            <input type="checkbox" id="flexprnt"> Nastavení parenta Divu na display flex.<span class="parent"> display: flex;</span> <br>
+            <input type="checkbox" id="alignprnt"> Nastavení parenta Divu na horizontální zarovnání položek do středu. Nutnost display: flex.<span class="parent"> align-items: center;</span> <br>
+            <input type="checkbox" id="justifyprnt"> Nastavení parenta Divu na vertikální zarovnání položek do středu. Nutnost display: flex.<span class="parent"> justify-content: center</span> <br>
         </div>
         <div class="example">
             <div class="sample">Sample text</div>
